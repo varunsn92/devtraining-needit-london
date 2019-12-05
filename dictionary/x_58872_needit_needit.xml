@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_for" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human resource" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="facilitiles" sequence="1" value="facilitiles"/>
+                <element inactive_on_update="false" label="legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="justic" sequence="3" value="justic"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_whats_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human resources 1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="Human resources 2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="facilities 1" sequence="2" value="f1"/>
+                <element inactive_on_update="false" label="facilities 2" sequence="3" value="f2"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="4" value="legal 1"/>
+                <element inactive_on_update="false" label="legal 2" sequence="5" value="legal 2"/>
+                <element inactive_on_update="false" label="justic 1" sequence="6" value="j1"/>
+                <element inactive_on_update="false" label="justic 2" sequence="7" value="j2"/>
+            </choice>
+        </element>
+        <element label="Request for" mandatory="true" max_length="32" name="u_when_needed" reference="sys_user" type="reference"/>
+    </element>
+</database>
